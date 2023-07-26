@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/Name5.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="https://drive.google.com/file/d/1WX0NSE_8z9LOjonSBd7o829iR-m_gcl8/view?usp=sharing">Resume</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Aman </span><br>Singh From India</h1>
+
+            </div>
+        </div>
+
+    </div>
+    <!---------------about----------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/fg.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hardworking and enthusiastic College Student working towards a B Tech in Computer Science. Seeking to use my knowledge of Coding and my advanced Communication Skills to effectively serve your company in an internship position. Dedicated, hardworking, and committed to becoming a dependable and valuable team member.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>JAVA</span><br>Concepts of Core JAVA</li>
+                                <li><span>Concept of OOPS</span><br>Inheritance / Polymorphism / Abstraction / Encapsulation</li>
+                                <li><span>Core Subjects</span><br>DSA / DBMS / SEPM</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022 - Current</span><br>Co-Founder TasKArena(Startup)</li>
+                                <li><span>May 21 - June 21</span><br>Chess Event(Euphoria) Manager/Team Leader</li>
+                                <li><span>Aug 21 - Oct 21</span><br>Organizing team member Elite Sports India</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020 - Current</span><br>B Tech in CSE from Jecrc University</li>
+                                <li><span>2020</span><br>Completed 12th from Gyan Vihar School</li>
+                                <li><span>2018</span><br>Completed 10th from Gyan Vihar School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------contact--------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>aman.ishu.jaipur@gmail.com</p>
+                    <p>+919636379536</p>
+                    <div class="social-icons">
+                        <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+                
+            }
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        } 
+                
+        
+
+
+
+    </script>
+</body>
+</html>
